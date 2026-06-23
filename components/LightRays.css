@@ -1,0 +1,23 @@
+.light-rays-container {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+/* Ensure the WebGL canvas fills the container and appears stronger */
+.light-rays-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  pointer-events: none;
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+  opacity: 0.95;
+  filter: brightness(1.2) saturate(1.15);
+  transform: scale(1.02);
+}
